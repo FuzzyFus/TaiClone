@@ -1,0 +1,66 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://scripts/note_objects/spinner.gd" type="Script" id=1]
+[ext_resource path="res://skins/test_skin/spinner-circle.png" type="Texture" id=2]
+[ext_resource path="res://skins/test_skin/spinner-approachcircle.png" type="Texture" id=3]
+
+[sub_resource type="DynamicFontData" id=2]
+font_path = "res://fonts/noto_sans_jp-regular.otf"
+
+[sub_resource type="DynamicFont" id=1]
+size = 48
+font_data = SubResource( 2 )
+
+[node name="SpinnerObject" type="KinematicBody2D"]
+script = ExtResource( 1 )
+
+[node name="RotationObj" type="Node2D" parent="."]
+
+[node name="SpinnerCircle" type="TextureRect" parent="RotationObj"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -200.0
+margin_top = -200.0
+margin_right = 200.0
+margin_bottom = 200.0
+grow_horizontal = 2
+grow_vertical = 2
+rect_pivot_offset = Vector2( 200, 200 )
+texture = ExtResource( 2 )
+expand = true
+stretch_mode = 6
+
+[node name="Approach" type="TextureRect" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -200.0
+margin_top = -200.0
+margin_right = 200.0
+margin_bottom = 200.0
+grow_horizontal = 2
+grow_vertical = 2
+rect_pivot_offset = Vector2( 200, 200 )
+texture = ExtResource( 3 )
+expand = true
+
+[node name="Label" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -9.0
+margin_top = 75.0
+margin_right = 9.0
+margin_bottom = 123.0
+grow_horizontal = 2
+grow_vertical = 2
+custom_fonts/font = SubResource( 1 )
+text = "0"
+align = 1
+valign = 1
+
+[node name="Tween" type="Tween" parent="."]

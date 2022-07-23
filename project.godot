@@ -12,7 +12,7 @@ _global_script_classes=[ {
 "base": "Reference",
 "class": "AudioLoader",
 "language": "GDScript",
-"path": "res://Scripts/GDScriptAudioImport.gd"
+"path": "res://scripts/gd_script_audio_import.gd"
 } ]
 _global_script_class_icons={
 "AudioLoader": ""
@@ -21,14 +21,14 @@ _global_script_class_icons={
 [application]
 
 config/name="TaiClone"
-run/main_scene="res://Game/Scenes/Gameplay.tscn"
+run/main_scene="res://game/scenes/gameplay.tscn"
 config/icon="res://icon.png"
 
 [autoload]
 
-settings="*res://Scripts/Global/GlobalSettings.gd"
-tools="*res://Scripts/Global/GlobalTools.gd"
-skin="*res://Scripts/Global/SkinManager.gd"
+settings="*res://scripts/global/global_settings.gd"
+tools="*res://scripts/global/global_tools.gd"
+skin="*res://scripts/global/skin_manager.gd"
 
 [display]
 
